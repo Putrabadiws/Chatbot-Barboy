@@ -80,5 +80,5 @@ Pengguna  ─▶  Website Burger Bangor  ─▶  BarBoy (embed)
 ---
 
 <div align="center">
-<sub>© Burger Bangor Indonesia. <a href="https://chat.burgerbangorindonesia.com/">https://chat.burgerbangorindonesia.com/</a></sub>
+<sub>© Burger Bangor Indonesia. Preview : <a href="https://chat.burgerbangorindonesia.com/">https://chat.burgerbangorindonesia.com/</a></sub>
 </div>
