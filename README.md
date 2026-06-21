@@ -28,7 +28,7 @@ Indonesia dengan persona ramah, sambil menarik informasi menu/promo/outlet secar
 *live* dari sistem internal perusahaan.
 
 > 🔒 **Repo ini adalah etalase (showcase).** Source code bersifat *proprietary* dan
-> disimpan privat. Yang ditampilkan di sini hanya gambaran umum produk.
+> Yang ditampilkan hanya gambaran umum produk.
 
 ---
 
@@ -79,19 +79,6 @@ Pengguna  ─▶  Website Burger Bangor  ─▶  BarBoy (embed)
 
 ---
 
-## 🚀 Status
-
-Sudah **berjalan di produksi** dan tersemat di website resmi Burger Bangor Indonesia.
-
----
-
-## 📬 Kontak
-
-Tertarik dengan detail teknis, demo, atau kolaborasi? Source code tersedia
-*on request* untuk keperluan yang sah.
-
----
-
 <div align="center">
-<sub>© Burger Bangor Indonesia. Dikembangkan sebagai bagian dari layanan digital internal.</sub>
+<sub>© Burger Bangor Indonesia. https://chat.burgerbangorindonesia.com/.</sub>
 </div>
