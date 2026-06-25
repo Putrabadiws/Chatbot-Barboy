@@ -1,81 +1,79 @@
 <div align="center">
-
 <img src="./assets/barboy.png" alt="BarBoy" width="120" />
 
 # BarBoy — AI Chatbot Customer Service
 
-**Asisten virtual untuk Burger Bangor Indonesia**
+**Virtual assistant for Burger Bangor Indonesia**
 
-Chatbot AI yang menjawab pertanyaan pelanggan seputar menu, promo, lokasi outlet,
-kemitraan, dan layanan — dengan jawaban *streaming* real-time dan data yang selalu
-sinkron dengan sistem bisnis.
+An AI chatbot that answers customer questions about the menu, promos, store locations,
+partnerships, and services — with real-time *streaming* responses and data always
+in sync with business systems.
 
 ![status](https://img.shields.io/badge/status-production-success)
 ![type](https://img.shields.io/badge/type-AI%20Chatbot-blueviolet)
 ![stack](https://img.shields.io/badge/Next.js-15-black)
 ![license](https://img.shields.io/badge/license-Proprietary-red)
-
 </div>
 
 ---
 
-## 📌 Tentang Project
+## 📌 About
 
-**BarBoy** adalah chatbot customer service berbasis AI yang dikembangkan untuk
-**Burger Bangor Indonesia** (800+ outlet, 150+ kota). Bot ini disematkan langsung
-di website utama dan melayani pelanggan 24/7 — menjawab pertanyaan dalam Bahasa
-Indonesia dengan persona ramah, sambil menarik informasi menu/promo/outlet secara
-*live* dari sistem internal perusahaan.
+**BarBoy** is an AI-powered customer service chatbot built for
+**Burger Bangor Indonesia** (800+ outlets, 150+ cities). Embedded directly
+on the main website, it serves customers 24/7 — answering questions in
+Indonesian with a friendly persona, while pulling live menu/promo/outlet
+information from the company's internal systems.
 
-> 🔒 **Repo ini adalah etalase (showcase).** Source code bersifat *proprietary* dan
-> Yang ditampilkan hanya gambaran umum produk.
-
----
-
-## ✨ Fitur Utama
-
-- 💬 **Chat streaming real-time** — jawaban muncul kata-per-kata, bukan loading lama.
-- 🍔 **Data menu, promo, & outlet live** — selalu sinkron dengan sistem bisnis, tanpa update manual.
-- 📍 **Outlet terdekat berbasis lokasi** — menemukan gerai terdekat dari posisi pengguna.
-- 🎴 **Rich cards** — tampilan visual untuk menu, promo, dan daftar outlet.
-- 🧠 **Routing model cerdas** — pertanyaan ringan & berat ditangani berbeda untuk efisiensi.
-- 🔤 **Toleransi salah ketik** — tetap paham walau ada typo.
-- ⚡ **Hemat & tahan beban** — caching + failover otomatis menjaga bot selalu aktif.
-- 🛡️ **Aman** — rate limiting, deteksi penyalahgunaan, dan proteksi input.
+> 🔒 **This repo is a showcase.** The source code is *proprietary* —
+> only a general overview of the product is displayed here.
 
 ---
 
-## 🏗️ Gambaran Arsitektur
+## ✨ Key Features
+
+- 💬 **Real-time streaming chat** — responses appear word by word, no long loading.
+- 🍔 **Live menu, promo, & outlet data** — always in sync with business systems, no manual updates.
+- 📍 **Location-based nearest outlet** — finds the closest store from the user's position.
+- 🎴 **Rich cards** — visual display for menus, promos, and outlet listings.
+- 🧠 **Smart model routing** — light and heavy queries are handled differently for efficiency.
+- 🔤 **Typo tolerance** — understands queries even with typos.
+- ⚡ **Efficient & resilient** — caching + automatic failover keeps the bot always active.
+- 🛡️ **Secure** — rate limiting, abuse detection, and input protection.
+
+---
+
+## 🏗️ Architecture Overview
 
 ```
-Pengguna  ─▶  Website Burger Bangor  ─▶  BarBoy (embed)
-                                            │
-                                            ▼
-                              ┌────────────────────────────┐
-                              │  Lapisan efisiensi & aman   │
-                              │  (cache, rate limit, filter)│
-                              └────────────────────────────┘
-                                            │
-                                            ▼
-                        Penarikan data bisnis live  +  LLM (streaming)
-                                            │
-                                            ▼
-                              Jawaban + rich cards real-time
+User  ─▶  Burger Bangor Website  ─▶  BarBoy (embed)
+                                          │
+                                          ▼
+                            ┌────────────────────────────┐
+                            │   Efficiency & safety layer  │
+                            │  (cache, rate limit, filter) │
+                            └────────────────────────────┘
+                                          │
+                                          ▼
+                      Live business data fetch  +  LLM (streaming)
+                                          │
+                                          ▼
+                            Response + real-time rich cards
 ```
 
 ---
 
 ## 🧰 Tech Stack
 
-| Kategori | Teknologi |
-|---|---|
-| Framework | Next.js 15 (App Router), React 19, TypeScript |
-| AI / Streaming | Vercel AI SDK (Server-Sent Events) |
-| Model | LLM keluarga LLaMA 3.x via penyedia berkecepatan tinggi |
-| UI | Tailwind CSS, Motion, Markdown rendering |
-| Validasi | Zod |
-| Testing | Vitest |
-| Deploy | Docker, di belakang Nginx (reverse proxy) |
+| Category       | Technology                                              |
+| -------------- | ------------------------------------------------------- |
+| Framework      | Next.js 15 (App Router), React 19, TypeScript           |
+| AI / Streaming | Vercel AI SDK (Server-Sent Events)                      |
+| Model          | LLaMA 3.x family LLM via high-speed provider            |
+| UI             | Tailwind CSS, Motion, Markdown rendering                |
+| Validation     | Zod                                                     |
+| Testing        | Vitest                                                  |
+| Deploy         | Docker, behind Nginx (reverse proxy)                    |
 
 ---
 
